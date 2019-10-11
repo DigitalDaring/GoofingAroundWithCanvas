@@ -21,7 +21,8 @@ export class Grid {
                 const newDot = {
                     anchor: Object.assign({}, newCoord),
                     location: Object.assign({}, newCoord),
-                    destination: Object.assign({}, newCoord)
+                    destination: Object.assign({}, newCoord),
+                    opacity: Math.random()
                 } as Dot;
 
                 allDots = [...allDots, newDot];
