@@ -14,13 +14,20 @@ const refreshDollars = () => {
 };
 
 const drawCircle = (x: number, y: number, radius: number) => {
-    context.strokeStyle = 'rgba(, 0, 0, 1)';
+    context.strokeStyle = 'rgba(0, 146, 216, 1)';
     context.fillStyle = 'rgba(0, 146, 216, 1)';
     context.beginPath();
     context.arc(x, y, radius, 0, 2 * Math.PI);
     context.stroke();
     context.fill();
+    drawDollaSign(x - radius/2, y + radius/2);
 };
+
+const drawDollaSign = (x: number, y: number) => {
+    context.fillStyle = 'rgba(255, 255, 255, 1)';
+    context.font = '20px Roboto';
+    context.fillText('$', x, y);
+}
 
 const moveDollarsDown = (gravity) => {
     dollarExploder.dollars.forEach(dollar => {
