@@ -7,7 +7,7 @@ const canvas = document.getElementById('dotsCanvas') as HTMLCanvasElement;
 const context = canvas.getContext("2d");
 
 const refreshDots = () => {
-    context.fillStyle = 'rgba(255, 255, 255, 1';
+    context.fillStyle = 'rgba(255, 255, 255, 1)';
     context.fillRect(0, 0, 640, 480);
     grid.dots.forEach((dot) => {
         context.fillStyle = `rgba(0, 0, 0, ${dot.opacity})`;

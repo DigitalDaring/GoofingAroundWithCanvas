@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = [
     {
         entry: {
-            "client": "./dot_field.ts"
+            "client": "./falling_dollars.ts"
         },
         devtool: "inline-source-map",
         module: {
